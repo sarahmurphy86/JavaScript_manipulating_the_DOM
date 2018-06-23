@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Favourite Dog App</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <script src="js/app.js"></script>
+  </head>
+  <body>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="name" class="primary">Name</label>
+          <input type="text" id="name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="colour" class="primary">Colour</label>
+          <input type="text" id="colour" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="category" class="primary">Breed</label>
+          <select id="breed">
+            <option value="" disabled selected></option>
+            <option value="Labrador">Labrador</option>
+            <option value="Poodle">Poodle</option>
+            <option value="Spaniel">Spaniel</option>
+            <option value="Husky">Husky</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit" value="save"/>
+    </form>
+
+    <button id="delete-all">Delete All</button>
+
+    <h1>My favourite dogs:</h1>
+    <div id="favourite-dogs"></div>
+  </body>
+</html>
