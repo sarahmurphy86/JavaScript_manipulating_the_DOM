@@ -1,3 +1,9 @@
+/* coment out for version 1 and 2 */
+
+body {
+  font-family: Arial;
+}
+
 #favourite-dogs {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +14,7 @@
 .favourite-dog-item {
   margin: 0.5rem 0.5rem;
   padding: 0.5rem 0.8rem;
-  border: 1px solid #20437c;
+  border: 1px solid DarkSlateGrey;
   border-radius: 5%;
-  background: #ddeaff;
+  background: lightCoral;
 }

@@ -22,24 +22,40 @@ const createFavouriteDogListItem = function (form) {
   const favouriteDogListItem = document.createElement('li');
   favouriteDogListItem.classList.add('favourite-dog-item');
 
-  // favouriteDogListItem.classList.add('li');
-  // favouriteDogListItem.textContent = `Name: ${form.name.value}, Colour: ${form.colour.value}, Breed: ${form.breed.value}`;
+// Version 1 - get the data in bulleted list row e.g
+// * Name: , Colour: , Breed:
+//   favouriteDogListItem.classList.add('li');
+//   favouriteDogListItem.textContent = `Name: ${form.name.value}, Colour: ${form.colour.value}, Breed: ${form.breed.value}`;
+//   return favouriteDogListItem;
+// }
 
-  // const nameParagraph = document.createElement('p');
-  // const name = `Name: ${form.name.value}`;
-  // nameParagraph.textContent = name;
-  // favouriteDogListItem.appendChild(nameParagraph);
-  //
-  // const colourParagraph = document.createElement('p');
-  // const colour = `Colour: ${form.colour.value}`;
-  // colourParagraph.textContent = colour
-  // favouriteDogListItem.appendChild(colourParagraph);
-  //
-  // const breedParagraph = document.createElement('p');
-  // const breed = `Breed: ${form.breed.value}`;
-  // breedParagraph.textContent = breed
-  // favouriteDogListItem.appendChild(breedParagraph);
-  //
+// Version 2 - get the data in a list per dog - doesnt look very good e.g.
+  // *
+  // Name:
+  // Colour:
+  // Breed:
+
+ //  favouriteDogListItem.classList.add('li');
+ //  const nameParagraph = document.createElement('p');
+ //  const name = `Name: ${form.name.value}`;
+ //  nameParagraph.textContent = name;
+ //  favouriteDogListItem.appendChild(nameParagraph);
+ //
+ //  const colourParagraph = document.createElement('p');
+ //  const colour = `Colour: ${form.colour.value}`;
+ //  colourParagraph.textContent = colour
+ //  favouriteDogListItem.appendChild(colourParagraph);
+ //
+ //  const breedParagraph = document.createElement('p');
+ //  const breed = `Breed: ${form.breed.value}`;
+ //  breedParagraph.textContent = breed
+ //  favouriteDogListItem.appendChild(breedParagraph);
+ //
+ //   return favouriteDogListItem;
+ // }
+
+  // Version 3 - get the data into a box called favourite-dog-item
+
   const name = buildElement('h3', form.name.value);
   favouriteDogListItem.appendChild(name);
 
@@ -61,4 +77,5 @@ const buildElement = function (tag, value) {
 
 const handleDeleteAllClick = function (event) {
   const dogList = document.querySelector('#favourite-dogs');
-  dogList.innerHTML = '';}
+  dogList.innerHTML = '';
+}
